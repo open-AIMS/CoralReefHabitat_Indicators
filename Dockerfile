@@ -114,7 +114,8 @@ RUN R -e "options(repos =  \
   install.packages('ggmcmc');  \
 "
 
-RUN R -e "  \
+RUN R -e "options(repos =  \
+  list(CRAN = 'https://packagemanager.posit.co/cran/2022-09-01/')); \
   install.packages('furrr');  \
   install.packages('progressr');  \
 "
